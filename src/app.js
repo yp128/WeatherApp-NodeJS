@@ -56,7 +56,7 @@ app.get('',(req,res) => {
 })
 
 app.get('*',(req,res) => {
-    res.send("some thing is wrong");
+    res.redirect('/home')
 })
 
 

@@ -12,7 +12,7 @@ myForm.addEventListener('submit',(e) => {
     details.textContent ='';
     temp.textContent ='';
     precip.textContent ='';
-    fetch("http://localhost:3000/weather?city="+inputField.value).then((response) =>{
+    fetch("/weather?city="+inputField.value).then((response) =>{
         response.json().then((data) => {
             if(data.error){
                 city.textContent = data.error;

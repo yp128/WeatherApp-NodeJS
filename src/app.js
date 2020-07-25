@@ -3,7 +3,7 @@ const path = require('path');
 const hbs = require('hbs');
 const geoMap = require('./utilities/geoMap')
 const  weatherRequest = require('./utilities/weather');
-const { response, query } = require('express');
+
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -50,6 +50,12 @@ app.get('/weather',(req,res) => {
     }
        
 })
+
+app.get('/about',(req,res) =>{
+    res.render('about',{
+        authorName: 'Yash Patel'
+    });
+});
 
 app.get('',(req,res) => {
     res.redirect('/home')
